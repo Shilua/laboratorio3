@@ -10,7 +10,8 @@
         function carga() {
             document.getElementById('usuario').placeholder = "usuarios";
             document.getElementById('pass').placeholder = "contraseña";
-            document.getElementById('button').onclick = buscar;
+            //document.getElementById('button').onclick = buscar;
+            document.getElementById('button').addEventListener("click",buscar);
 
         }
         window.onload = carga;
