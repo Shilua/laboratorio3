@@ -3,12 +3,32 @@
 <head>
     <meta charset="utf-8">
     <title>Page Title</title>
-    
+    <script>
+        
+        
+
+        function carga() {
+            document.getElementById('usuario').placeholder = "usuarios";
+            document.getElementById('pass').placeholder = "contraseña";
+            document.getElementById('button').onclick = buscar;
+
+        }
+        window.onload = carga;
+        function buscar() {
+            var usuario = document.getElementById('usuario').value;
+            //$('#usuario').val();
+            var clave = document.getElementById('pass').value;
+            if(usuario == "juan" && clave == "123"){
+                alert("validado");}
+            else{
+                alert("no validado");}
+        }
+    </script>
 </head>
 <body>
     <fieldset>
+        <form action="" method="POST">
         <legend>Login:</legend>
-    <form action="" method="GET">
         Usuario
         <br>
         <input type="text" name="usuario" id="usuario"><br>
@@ -18,7 +38,8 @@
         <br>
         <input type="checkbox" name="cbRecordar" value="checked" checked>Recurdar usuario y Contraseña
         <br>
-        <input type="submit"><input type="reset" name="" id="">
+        <input type="submit" value="Enviar" id="button">
+        <input type="reset" name="" id="" >
     </form>
 </fieldset>
 </body>
