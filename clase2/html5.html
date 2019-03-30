@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/calculadora.js"></script>
+    <style>
+        #st{
+            color:blue;
+            font-size:20pt;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Titulo</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Link 1</a></li>
+                <li><a href="#">Link 2</a></li>
+                <li><a href="#">Link 3</a></li>
+                <li><a href="#">Link 4</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <article>
+                <p style="color:red; font-size:10pt">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium, incidunt. Ullam, obcaecati voluptates maxime sed repellendus nam saepe quae aliquam? Debitis perspiciatis atque dolore nesciunt facere qui accusantium accusamus est.</p>
+                <p id="st">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod inventore quis numquam ab accusamus dicta facilis, eaque quibusdam pariatur temporibus cupiditate blanditiis. Porro voluptates repudiandae dicta architecto amet neque placeat!</p>
+            </article>
+            <article>
+                <p class="negrita">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error, iste quisquam nisi saepe reprehenderit tempora veniam quam. Maiores, harum, sit porro quasi culpa nemo delectus ducimus autem nobis neque perspiciatis?</p>
+            </article>
+            <article>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores soluta sapiente ullam enim, itaque sint culpa temporibus explicabo facere excepturi hic eum iure porro repellat labore rem beatae dolorum quisquam.
+            </article>
+        </section>
+        <hr>
+        <section>
+            <article>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores soluta sapiente ullam enim, itaque sint culpa temporibus explicabo facere excepturi hic eum iure porro repellat labore rem beatae dolorum quisquam.
+            </article>
+            <article>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores soluta sapiente ullam enim, itaque sint culpa temporibus explicabo facere excepturi hic eum iure porro repellat labore rem beatae dolorum quisquam.
+            </article>
+            <article>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores soluta sapiente ullam enim, itaque sint culpa temporibus explicabo facere excepturi hic eum iure porro repellat labore rem beatae dolorum quisquam.
+                
+            </article>
+        </section>
+        <h1>Calculadora</h1>
+
+    <fieldset>
+        <legend>Sumar numeros</legend>
+        Se debe ingresar dos numeros y hacer click en el boton sumar para ver el resultado.<br>
+        <input type="number" name="valor1" id="valor1"> +
+        <input type="number" name="valor2" id="valor2">
+        <input type="button" value="Sumar" id="sumar" class="rojo">
+        <input type="button" value="Sumar y guardar" id="guardar" class="verde"><br>
+        Resultado: <input type="number" name="resultado" id="resultado">
+        <hr>
+        <h2>Historial de resultados</h2>
+        <table border="1">
+            <thead>
+                <th>Numero 1</th>
+                <th>Numero 2</th>
+                <th>Resultado</th>
+            </thead>
+            <tbody id="tbody">
+            </tbody>
+        </table>
+    </fieldset>
+    </main>
+    <footer>
+        <p>hecho por saraza</p>
+    </footer>
+</body>
+</html>

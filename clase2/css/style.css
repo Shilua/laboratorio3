@@ -1,0 +1,37 @@
+h1{
+    color: green;
+}
+
+p.negrita{
+    font-weight: bold;
+    background-color: aqua;
+}
+
+input[type='button']{
+    border-style: none;
+    margin: 50px 0px 50px 0px;
+    color: white;
+    font-weight: bold;
+    font-size: 15pt;
+    height: 50px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.verde{
+    background-color: green;
+    width: 175px;
+}
+
+.rojo{
+    background-color: red;
+    width: 150px;
+}
+
+input[type='number']{
+    text-align: right;
+    margin: 0px 30px 0px 0px;
+    height: 45px;
+    width: 80px;
+    font-weight: bold;
+}
