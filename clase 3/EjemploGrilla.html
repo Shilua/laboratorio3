@@ -9,14 +9,16 @@
     <script src="js/funciones.js"></script>
 </head>
 <body>
-    <div class="contenedor">
+    <div class="contenedor" id="contAgregar" hidden>
+        <input type="button" value="x" id="cerrar"><br>
             <label for="fname">Nombre</label><br>
-            <input type="text" name="fname" id="fname"><br>
+            <input type="text" name="fname" id="fname" placeholder="Nombre"><br>
             <label for="flast_name">Apellido</label><br>
-            <input type="text" name="lname" id="lname"><br>
-            <input type="button" value="Guardar" id="guardar">
+            <input type="text" name="lname" id="lname" placeholder="Apellido"><br>
+            <input type="button" name="boton" value="Guardar" id="guardar">
     </div>
     
+    <input type="button" value="Agregar" id="agregar">
     <hr>
     <table>
         <thead>
