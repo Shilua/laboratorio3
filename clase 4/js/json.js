@@ -11,4 +11,3 @@ var str = '{"nombre":"juan", "apellido": "perez"}';
 var json = JSON.parse(str);
 //convierte un json a string
 var str = JSON.stringify(json);
-
