@@ -6,6 +6,8 @@ input[type=text]{
     border-radius: 4px;
     box-sizing: border-box;
 }
+
+
 table{
     width: 100%;
 }
@@ -41,7 +43,7 @@ input[name='boton']{
     color: white;
     font-weight: bold;
     font-size: 15pt;
-    height: 50px;
+    height: 30px;
     border-radius: 8px;
     cursor: pointer;
     background-color: green;
