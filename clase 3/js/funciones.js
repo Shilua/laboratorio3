@@ -22,7 +22,10 @@ function guardar(params) {
     if (confirm("¿Esta seguro que desea agregar a la persona?")) {
         document.getElementById("lname").className= "sinError";
         document.getElementById("fname").className= "sinError";
-        table.innerHTML += "<tr><td>"+nombre+"</td><td>"+apellido+"</td><td><a href =\"\">Borrar</a></td></tr>";
+        
+        var createTr = document.createElement("tr");
+
+        //table.innerHTML += "<tr><td>"+nombre+"</td><td>"+apellido+"</td><td><a href =\"\">Borrar</a></td></tr>";
     }
 }
 

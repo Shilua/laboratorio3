@@ -47,11 +47,11 @@ function postear(params) {
     var email = getParameterByName("email", window.url);
 
     var datosJson = {"title": title, "header": header, "posttext": postText, "author": email};
-    var datosLogin = JSON.stringify(datosJson);
+    var datosPost = JSON.stringify(datosJson);
     xml.open("POST", "http://192.168.2.232:1337/postearNuevaEntrada", true);
     xml.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xml.onreadystatechange = callback;
-    xml.send(datosLogin);  
+    xml.send(datosPost);  
 }
 
 function callback() {
