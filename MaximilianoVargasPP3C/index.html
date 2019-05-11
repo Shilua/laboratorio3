@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="./js/functionsIndex.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Index</title>
+</head>
+<body>
+    <fieldset id="fieldset" class= "contenedor divAbsolute" hidden>
+        <button type="button" id="buttonClose" class="buttonClose">X</button>
+        <div class="form" id="form">
+        <label class="formulario">Nombre</label>
+            <br>
+            <input type="text" id="inputName" name="inputName"  width="50px" placeholder="Ingrese nombre..." />
+            <br>
+            <label>Cuatrimestre</label>
+            <br>
+            <select name="cuatrimestre" id="cuatrimestre">
+                <option value="1">1</option>
+                <option value="1">2</option>
+                <option value="1">3</option>
+                <option value="1">4</option>
+            </select>
+            <br>
+            <label>Fecha de Nac.</label>
+            <br>
+            <input type="radio" name="inputTurno" id="turnoMañana" value="Mañana" checked> Mañana<br>
+            <input type="radio" name="inputTurno" id="turnoNoche" value="Noche"> Noche<br>
+            <br>
+            <label>Fecha</label>
+            <br>
+            <input type="date" id="inputFecha" name="inputFecha" width="50px"/>
+            <br>
+            
+            <button type="button" class="buttonSave" id="modButton">Modificar</button>
+            <button type="button" class="buttonSave" id="deleteButton">Eliminar</button>
+            
+        </div>
+    </fieldset>
+    <br>
+    <br>
+    <br>
+    <label>Lista de Resultados</label>
+    <table border="0" id="resultTable">
+            <thead class="resultTable">
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Cuatrimestre</th>
+                <th>Fecha de Final</th>
+                <th>Turno</th>
+            </thead>
+            <tbody id="tableBody">
+            </tbody>
+        </table>
+</body>
+</html>
