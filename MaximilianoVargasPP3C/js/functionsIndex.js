@@ -80,32 +80,12 @@ function clickOnRow(e){
     var personas = JSON.parse(localStorage.getItem('cachedData'));
     personas.forEach(persona => {
         if(id == persona.id){
+            
+            var inputName = get('inputName');
+            var inputCuatrimestre = get('cuatrimestre');
 
-            for (let i = 0; i < form.children.length; i++) {
-                const element = form.children[i];
-                    var input = element.getAttribute("name");
-
-                    
-
-                    if(input){
-                        console.log(input);
-                        if(input === "inputName"){
-                        form.children[i].setAttribute("value",persona.nombre );
-                        }
-                        else if (input === "cuatrimestre") {
-                            option = form.children[i].children;
-                            for (let i = 0; i < option.length; i++) {
-                                const element = option[i];
-                                var value = element.getAttribute("value");
-                                if(value == persona.cuatrimestre)
-                                {
-                                    console.log(value);
-                                }
-                                
-                            }
-                        }
-                    }
-            }
+            inputName.setAttribute("value", persona.nombre);
+            
         }
 
     });
