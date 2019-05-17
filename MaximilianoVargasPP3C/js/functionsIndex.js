@@ -63,40 +63,37 @@ function get(id) {
     var retorno = document.getElementById(id);
     return retorno;
 }
+function getName(name) {
+    var retorno = document.getElementsByName(name);
+    return retorno;
+}
 
 function deleteFunction(e){
     e.preventDefault();
-    //console.log(e.target.parentNode.parentNode);
-    //console.log(e.srcElement.parentNode.parentNode);
     var trToDelete = e.srcElement.parentNode.parentNode;
     trToDelete.parentNode.removeChild( trToDelete );
 }
 
 function clickOnRow(e){
     e.preventDefault();
-    var form = get('form');
     abrir();
-    var id = e.target.parentNode.firstChild.firstChild.nodeValue;
-    var personas = JSON.parse(localStorage.getItem('cachedData'));
-    personas.forEach(persona => {
-        if(id == persona.id){
-            
-            var inputName = get('inputName');
-            var inputCuatrimestre = get('cuatrimestre');
-
-            inputName.setAttribute("value", persona.nombre);
-            
-            var options = inputCuatrimestre.children
-
-                
-            for (let i = 0; i < options.length; i++) {
-                 if(options[i].value == persona.cuatrimestre)
-                {
-                    options[i].sellected = 'selected';
-                }
-                
-            }
-        }
-
-    });
+    var hijos = e.target.parentNode.children;
+    get('inputName').value = hijos[1].innerHTML;
+    var cuatrimestre = get('cuatrimestre')
+    cuatrimestre.value = hijos[2].innerHTML;
+    cuatrimestre.disabled = true;
+    var turno = hijos[4].innerHTML;
+    if(turno === "Mañana")
+    {
+        get('inputTurnoM').checked = true;
+        get('inputTurnoN').checked = false;
+    }
+       
+    else{
+        get('inputTurnoN').checked= true;
+        get('inputTurnoM').checked = false;
+    }
+    var fecha = hijos[3].innerHTML;
+    nuevaFecha = fecha.split('/');
+    get('inputFecha').value = nuevaFecha[2]+"-"+nuevaFecha[1]+"-"+nuevaFecha[0];    
 }
