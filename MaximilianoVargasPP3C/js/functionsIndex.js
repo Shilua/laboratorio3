@@ -86,6 +86,16 @@ function clickOnRow(e){
 
             inputName.setAttribute("value", persona.nombre);
             
+            var options = inputCuatrimestre.children
+
+                
+            for (let i = 0; i < options.length; i++) {
+                 if(options[i].value == persona.cuatrimestre)
+                {
+                    options[i].sellected = 'selected';
+                }
+                
+            }
         }
 
     });
