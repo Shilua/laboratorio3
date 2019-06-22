@@ -9,4 +9,5 @@ var animal;
         };
         return gato;
     }());
+    animal.gato = gato;
 })(animal || (animal = {}));

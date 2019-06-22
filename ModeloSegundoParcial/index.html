@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <title>Segundo Modelo de Parcial</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" id="mostrar-empleados" href="#">Mostrar</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#" disabled>Formulario</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Ver
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Promedio</a>
+                        <a class="dropdown-item" href="#">Filtrar</a>
+                        <a class="dropdown-item" href="#">Solo Nombre y Apellido</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="containder">
+        <div class="row">
+            <div class="col-md-3 bg-secondary">
+                <h2>Alta Empleado</h2>
+                <form action="">
+                    <div class="form-group">
+                        <label for="nombre">Nombre: </label>
+                        <input type="text" class="form-control" name="nombre" id="nombre">
+                    </div>
+                    <div class="form-group">
+                        <label for="apellido">Apellido: </label>
+                        <input type="text" class="form-control" name="apellido" id="apellido">
+                    </div>
+                    <div class="form-group">
+                        <label for="edad">Edad: </label>
+                        <input type="number" class="form-control" name="edad" id="edad">
+                    </div>
+                    <div class="form-group">
+                        <label for="legajo">Legajo: </label>
+                        <input type="number" class="form-control" name="legajo" id="legajo">
+                    </div>
+                    <div class="form-group">
+                        <label for="horario">Horario:</label>
+                        <select class="form-control" name="horario" id="horario">
+                            <option value="mañana">Mañana</option>
+                            <option value="tarde">Tarde</option>
+                        </select>
+                    </div>
+                    <button id="cancelar" class="btn btn-danger"><i class="fas fa-times"></i> Cancelar</button>
+                    <button id="agregar" class="btn btn-lg btn-success float-right"><i class="far fa-save"></i> Agregar</button>
+                </form>
+            </div>
+            <div class="col-md-9">
+                <h2>Lista de Empleados</h2>
+                <table class="table table-striped ">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Apellido</th>
+                            <th>Edad</th>
+                            <th>Legajo</th>
+                            <th>Horaio</th>
+                            <th>Accion</th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

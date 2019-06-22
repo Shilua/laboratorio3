@@ -11,6 +11,12 @@ var animal;
         Perro.prototype.hacerRuido = function () {
             return "Guau!!";
         };
+        Perro.prototype.getNombre = function () {
+            return this.nombre;
+        };
+        Perro.prototype.setNombre = function (nombre) {
+            this.nombre = nombre;
+        };
         return Perro;
     }());
     animal.Perro = Perro;

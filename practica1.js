@@ -1,3 +1,4 @@
+"use strict";
 // Tipos
 var batman = "Bruce";
 var superman = "Clark";

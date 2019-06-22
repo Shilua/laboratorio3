@@ -1,3 +1,4 @@
+"use strict";
 // Funciones Básicas
 function sumar(a, b) {
     return a + b;
