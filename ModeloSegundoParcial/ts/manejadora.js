@@ -14,7 +14,7 @@ var Empleados;
         var legajo = Number($('#legajo').val());
         var horario = String($('#horario').val());
         var nuevoEmpleado = new Empleados.Empleado(nombre, apellido, edad, horario, legajo);
-        storage.push(nuevoEmpleado);
+        guardarLocalStorage(nuevoEmpleado);
     }
     function limpiarFormulario() {
         $('#nombre').val('');
@@ -27,6 +27,15 @@ var Empleados;
         e.preventDefault();
     }
     function guardarLocalStorage(empleado) {
-        localStorage.setItem(String(empleado.legajo), empleado.ToJSON());
+        if (localStorage.getItem("storage") === null) {
+            storage.push(empleado);
+            localStorage.setItem('storage', JSON.stringify(storage));
+        }
+        else {
+            var toParse = localStorage.getItem('storage');
+            storage = JSON.parse(toParse);
+            storage.push(empleado);
+            localStorage.setItem('storage', JSON.stringify(storage));
+        }
     }
 })(Empleados || (Empleados = {}));

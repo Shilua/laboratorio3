@@ -6,7 +6,9 @@ namespace Empleados{
      });
      
     var storage:Array<Empleado>;
-    function agreagarEmpleado() {
+
+    function agreagarEmpleado(e:any) {
+        e.preventDefault();
         let nombre:string = String($('#nombre').val());
         let apellido:string = String($('#apellido').val());
         let edad:number = Number($('#edad').val());
@@ -14,7 +16,7 @@ namespace Empleados{
         let horario:string = String($('#horario').val());
 
         let nuevoEmpleado:Empleado = new Empleado(nombre,apellido,edad,horario,legajo);
-        storage.push(nuevoEmpleado);
+        guardarLocalStorage(nuevoEmpleado);
     }
 
     function limpiarFormulario() {
@@ -32,7 +34,16 @@ namespace Empleados{
 
 
     function guardarLocalStorage(empleado:Empleado) {
-        localStorage.setItem(String(empleado.legajo),empleado.ToJSON());
+        if (localStorage.getItem("storage") === null) {
+            storage.push(empleado);
+            localStorage.setItem('storage', JSON.stringify(storage));
+          }
+          else{
+            let toParse:any = localStorage.getItem('storage');
+            storage = JSON.parse(toParse);
+            storage.push(empleado);
+            localStorage.setItem('storage', JSON.stringify(storage));
+        }
     }
 
 }
