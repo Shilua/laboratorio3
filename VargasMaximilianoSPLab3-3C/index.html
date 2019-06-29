@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- STYLES -->
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- SCRIPTS -->
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/vehiculo.js"></script>
+    <script src="./js/auto.js"></script>
+    <script src="./js/camioneta.js"></script>
+    <title>Segundo Parcial</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <button class="btn btn-success" data-toggle="modal" data-target="#AltaModal"> Alta</button>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h4>Filtros</h4>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label for="filtrarPor">Filtrar por:</label>
+                    <select name="filtrarPor" id="filtrarPor" class="custom-select">
+                        <option value="camioneta">Camioneta</option>
+                        <option value="auto">Auto</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <button class="btn btn-success" id="btn-promedio">Calcular Promedio</button>
+                    <label for="promedio" class="form-label-control">Promedio de precio:</label>
+                    <input type="number" name="promedio" id="promedio" class="form-control">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <button class="btn btn-danger" id="btn-limpiar">Limpiar Memoria</button>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-12">
+                <h4>Campos moestrados</h4>
+                <p>Tildar lso campos a mostrar</p>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="checkbox">
+                    <label class="checkbox-inline">
+                      <input type="checkbox" id="idCheck" value="id" checked> Id
+                    </label>
+                    <label class="checkbox-inline">
+                      <input type="checkbox" id="marcaCheck" value="marca" checked> Marca
+                    </label>
+                    <label class="checkbox-inline">
+                      <input type="checkbox" id="modeloCheck" value="modelo" checked> Modelo
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" id="precioCheck" value="precio" checked> Precio
+                    </label>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h4>Lista de Vehiculos</h4>
+            </div>
+        </div>
+        <hr>
+        <div class="col-md-12">
+            <table class="table">
+                <thead>
+                    <th>Id</th>
+                    <th>Marca</th>
+                    <th>Modelo</th>
+                    <th>Precio</th>
+                    <th>Accion</th>
+                </thead>
+                <tbody id="tBody">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <div class="modal fade" id="AltaModal" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+            
+                <div class="modal-header">
+                    <h4 class="modal-title">Alta Vehiculo</h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="idInput" class="form-label-control">Id:</label>
+                        <input type="number" name="idInput" id="idInput" class="form-control" disabled>
+                    </div>
+                    <div class="form-group">
+                        <label for="marcaInput" class="form-label-control">Marca:</label>
+                        <input type="text" name="marcaInput" id="marcaInput" class="form-control" required="true"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="modeloInput" class="form-label-control">Modelo:</label>
+                        <input type="text" name="modeloInput" id="modeloInput" class="form-control" required="true"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="precioInput" class="form-label-control">Precio:</label>
+                        <input type="Number" name="precioInput" id="precioInput" class="form-control" required="true"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="tipoInput">Tipo:</label>
+                        <select name="tipoInput" id="tipoInput" class="custom-select" required="true">
+                            <option value="camioneta">Camioneta</option>
+                            <option value="auto">Auto</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-footer d-flex justify-content-between">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">
+                        <i class="fas fa-times mr-2"></i>Cerrar
+                    </button>
+                    <button type="button" class="btn btn-success" data-dismiss="modal" id="btn-agregar">
+                        Agregar
+                    </button>
+                </div>
+            
+            </div>
+         </div>
+    </div>
+</body>
+</html>
